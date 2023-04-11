@@ -1,0 +1,2 @@
+# met
+Minimal expenses tracking
