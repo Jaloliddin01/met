@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'minex.apps.MinexConfig',
+
+    'django_filters'
 ]
 
 MIDDLEWARE = [

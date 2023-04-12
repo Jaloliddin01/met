@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.contrib.auth import authenticate, login, logout
-from .models import User
+from .models import Expense
 
 class HomeView(View):
     def get(self, request):
@@ -13,7 +13,9 @@ class UserRegistrationView(View):
 
 class ExpenseView(View):
     def get(self, request):
-        return render(request, 'expenses.html')
+        data = Expense.objects.all()
+
+        return render(request, 'expenses.html', {'data': data})
 
 class CategoryView(View):
     def get(self, request):
